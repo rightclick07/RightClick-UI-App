@@ -1,0 +1,106 @@
+
+    <mat-toolbar class="toolbar mat-elevation-z3">
+        <mat-toolbar-row style="background-color: white;">
+            <div>
+                <a routerLink="/" routerlink-active="active-link" class="logo-link">
+                    <img src="assets/img/red-logo.png" width="30px" style="vertical-align: middle;margin-right: 5px;"   alt="logo"/>
+                    <span style="color:red;">RightClick</span>
+                </a>
+            </div>
+           
+            <div style="font-size:10px;margin: auto;width: 60%;padding-bottom:0;vertical-align: middle;">
+                <form class="form">
+                    <mat-form-field class="mat-form-field"  appearance="outline">
+                        
+                      <input type="text"
+                            style="color: rgb(160, 146, 17);"
+                             placeholder="Select Course"
+                             aria-label="Number"
+                             matInput
+                             [formControl]="myControl"
+                             [matAutocomplete]="auto">
+                      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                          {{option}}
+                        </mat-option>
+                        
+                    </mat-autocomplete>
+                    
+                    </mat-form-field>
+                    <button (click)="OnSearchCourse(this.myControl.value)" mat-button type="submit" style="vertical-align: middle;text-align: center;margin-bottom: 10px;">
+                        <mat-icon style="color:rgb(160, 146, 17);font-size: 26px;">search</mat-icon>
+                    </button>
+                    </form>
+            </div>
+           <div  fxHide.sm="true" fxHide.md="true" fxHide.xs="true" >
+            <a style="vertical-align: middle;" href="https://www.youtube.com/channel/UCI_5b08hocM7hXh5JK8fJ7w">
+                <img src="assets/img/social-media/youtube-logo.png" width="40">
+            </a>
+            <a style="vertical-align: middle;" href="">
+                <img src="assets/img/social-media/instagram-logo.png" width="40">
+            </a>
+            <a style="vertical-align: middle;" href="">
+                <img src="assets/img/social-media/twitter-logo.png" width="40">
+            </a>
+            <a style="vertical-align: middle;" href="">
+                <img src="assets/img/social-media/facebook-logo.png" width="40">
+            </a>
+            <a style="vertical-align: middle;" href="">
+                <img src="assets/img/social-media/linkedin-logo.png" width="40">
+            </a>
+           </div>
+        </mat-toolbar-row>
+        <mat-toolbar-row style="background-color: white;text-align: center;" fxHide.lg="true">
+            <div>
+                <a style="vertical-align: middle;" href="https://www.youtube.com/channel/UCI_5b08hocM7hXh5JK8fJ7w">
+                    <img src="assets/img/social-media/youtube-logo.png" width="40">
+                </a>
+                <a style="vertical-align: middle;" href="">
+                    <img src="assets/img/social-media/instagram-logo.png" width="40">
+                </a>
+                <a style="vertical-align: middle;" href="">
+                    <img src="assets/img/social-media/twitter-logo.png" width="40">
+                </a>
+                <a style="vertical-align: middle;" href="">
+                    <img src="assets/img/social-media/facebook-logo.png" width="40">
+                </a>
+                <a style="vertical-align: middle;" href="">
+                    <img src="assets/img/social-media/linkedin-logo.png" width="40">
+                </a>
+               </div>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+            <mat-icon style="vertical-align: middle;">menu</mat-icon>
+            <button mat-button >
+                <a routerLink="/"  class="home-link">
+                    <mat-icon style="vertical-align: middle; margin-right: 2px;">home</mat-icon>
+                     <span>Home</span>
+                </a>
+            </button>
+           <button mat-button [matMenuTriggerFor]="courseMenu">
+            <mat-icon style="vertical-align: middle;margin-right: 5px;">book</mat-icon>
+               Course</button>
+            <mat-menu #courseMenu="matMenu">
+                <div *ngFor="let course of courses">
+                    <button routerLink="{{course.routeUrl}}" mat-menu-item>
+                        <mat-icon style="vertical-align: middle;margin-right: 5px;color:rgb(160, 146, 17)">description</mat-icon>
+                        {{course.title}}</button>
+                </div>
+               
+               
+            </mat-menu>
+            
+           <button mat-button class="login-button">
+                <a  routerLink="/login" routerlink-active="active-link"  class="login-link">
+                <mat-icon style="vertical-align: middle;margin-right: 5px;">input</mat-icon>Login
+                </a>
+           </button>
+           <button mat-button >
+               <a class="about" routerLink="/about-us">
+                <mat-icon style="vertical-align: middle;"> person_pin</mat-icon>
+                   About Us</a>
+            </button>
+    
+        </mat-toolbar-row>
+    </mat-toolbar>
+   <router-outlet></router-outlet>

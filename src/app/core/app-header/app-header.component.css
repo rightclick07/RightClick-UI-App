@@ -1,0 +1,45 @@
+.home-link{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.logo-link{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+.login-link{
+    text-decoration: none;
+    color: white;
+}
+.login-button{
+    float: right;
+}
+.toolbar{
+    background-color: rgb(160, 146, 17);
+    color: white;
+}
+.form {
+   
+    display: flex;
+    width: 100%;
+    font-size: 12px;
+    padding: -6px;
+  }
+  .about{
+      text-decoration: none;
+      color: white;
+  }
+  
+  .mat-form-field{
+      width: 100%;
+     
+  }
+  .mat-form-field > mat-form-field-wrapper {
+    padding-bottom: 0;
+    margin: 0;
+}

@@ -1,0 +1,28 @@
+.card{
+    width: 350px;
+    margin-left:auto;
+    margin-right:auto; 
+    margin-top: 25px;
+    vertical-align:middle;
+    text-align: center;
+}
+.login-button{
+    background-color: rgb(160, 146, 17);
+    color: white;
+    margin-left:10px;
+}
+.title{
+    color:rgb(160, 146, 17);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.forget-password{
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: rgb(160, 146, 17);
+}
+.form-field{
+    width:100%;
+}
+.form{
+    margin:5%
+}

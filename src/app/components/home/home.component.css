@@ -1,0 +1,14 @@
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 5px;
+    
+}
+
+.flex-container > div {
+    flex: 1 1 auto;
+    border: 1px #fff(160, 146, 17) solid;
+    text-align: center;
+  
+    margin: 5px;}

@@ -1,0 +1,10 @@
+.toolbar{
+    bottom: 0;
+    position: absolute;
+    background-color: #08b7bd;
+    color: white;
+}
+.footer{
+    font-size: 15px;
+    text-align: center;
+}

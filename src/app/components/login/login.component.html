@@ -1,0 +1,31 @@
+
+  <mat-card class="card mat-elevation-z13">
+      <div class="title">
+        <mat-card-title>
+            Login to Right Click
+        </mat-card-title>
+      </div>
+      <mat-divider></mat-divider>
+      <form [formGroup]="userForm" (ngSubmit)="checkLogin()" class="form">
+          <div>
+            <mat-form-field  class="form-field">
+                <mat-label>Username</mat-label>
+                <input type="text" placeholder="Enter Username" formControlName="username" matInput/>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="form-field">
+                <mat-label>Password</mat-label>
+                <input type="password" placeholder="Enter Password"  formControlName="password" matInput/>
+            </mat-form-field>
+          </div>
+          <div style="margin: 5%;">
+              <a class="forget-password" routerLink="/forget-password">Forget Password ?</a>
+          </div>
+          <div>
+            <button mat-button routerLink="/signup" class="login-button">Sign Up</button>
+            <button mat-button type="submit"[disabled]="!userForm.valid"  class="login-button">Login</button>
+          </div>
+          
+      </form>
+    </mat-card>
