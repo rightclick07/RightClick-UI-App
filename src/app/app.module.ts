@@ -27,6 +27,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,9 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     HomeComponent,
     SignUpComponent,
     ForgetPasswordComponent,
-    AboutUsComponent
+    AboutUsComponent,
+   
+    
   ],
   imports: [
     BrowserModule,

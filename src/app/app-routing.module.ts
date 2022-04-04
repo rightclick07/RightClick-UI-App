@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'html',
     loadChildren: () => import('./modules/html/html.module').then(m => m.HtmlModule)
+  },
+  {
+    path: 'blogs',
+    loadChildren: () => import('./modules/blogs/blogs.module').then(m => m.BlogsModule)
   }
 ];
 
