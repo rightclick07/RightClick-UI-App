@@ -5,8 +5,11 @@ import { BlogsRoutingModule } from './blogs-routing.module';
 import { BlogsComponent } from './blogs.component';
 
 
+
 @NgModule({
   declarations: [
+    
+  
     BlogsComponent
   ],
   imports: [

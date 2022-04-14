@@ -3,6 +3,9 @@
     text-align: center;
     width:40%;
     margin-top:50px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
 }
 .login-button{
     background-color: rgb(160, 146, 17);
@@ -20,7 +23,11 @@
 }
 .form-field{
     width:100%;
+    
+
+    
 }
 .form{
     margin:5%
+
 }
