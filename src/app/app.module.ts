@@ -27,6 +27,11 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { MainNavComponent } from './core/main-nav/main-nav.component'; 
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { CareerComponent } from './components/career/career.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +42,10 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     HomeComponent,
     SignUpComponent,
     ForgetPasswordComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    MainNavComponent,
+    ContactUsComponent,
+    CareerComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +67,9 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     MatCarouselModule,
     MatAutocompleteModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    LayoutModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

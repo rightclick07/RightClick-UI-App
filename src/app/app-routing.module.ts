@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { CareerComponent } from './components/career/career.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent },
   {path: 'about-us', component: AboutUsComponent},
+  {path: 'contact-us', component: ContactUsComponent},
+  {path: 'career', component: CareerComponent},
   { path: 'forget-password', component: ForgetPasswordComponent },
   { path: 'logout', component: LogoutComponent , canActivate:[AuthGuardService] },
   {
@@ -26,6 +30,10 @@ const routes: Routes = [
   {
     path: 'html',
     loadChildren: () => import('./modules/html/html.module').then(m => m.HtmlModule)
+  },
+  {
+    path: 'blogs',
+    loadChildren: () => import('./modules/blogs/blogs.module').then(m => m.BlogsModule)
   }
 ];
 
