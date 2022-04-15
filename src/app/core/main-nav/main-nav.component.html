@@ -32,7 +32,7 @@
                   <mat-form-field class="mat-form-field"  appearance="outline">
                       
                     <input type="text"
-                          style="color: rgb(160, 146, 17);"
+                          style="color: #20c997;"
                            placeholder="Select Course"
                            aria-label="Number"
                            matInput
@@ -47,7 +47,7 @@
                   
                   </mat-form-field>
                   <button (click)="OnSearchCourse(this.myControl.value)" mat-button type="submit" style="vertical-align: middle;text-align: center;padding: 0;margin: 0;margin-bottom: 10px;">
-                      <mat-icon style="color:rgb(160, 146, 17);font-size: 26px;">search</mat-icon>
+                      <mat-icon style="color:#20c997;;font-size: 26px;">search</mat-icon>
                   </button>
                   </form>
           </div>
@@ -110,7 +110,7 @@
           <mat-menu #courseMenu="matMenu">
               <div *ngFor="let course of courses">
                   <button routerLink="{{course.routeUrl}}" mat-menu-item>
-                      <mat-icon style="vertical-align: middle;margin-right: 5px;color:rgb(160, 146, 17)">description</mat-icon>
+                      <mat-icon style="vertical-align: middle;margin-right: 5px;color:#20c997">description</mat-icon>
                       {{course.title}}</button>
               </div>
              
@@ -129,7 +129,7 @@
             <mat-menu #companyMenu="matMenu">
                 <div *ngFor="let menu of companyMenuList">
                     <button routerLink="{{menu.routeUrl}}" mat-menu-item>
-                        <mat-icon style="vertical-align: middle;margin-right: 5px;color:rgb(160, 146, 17)">{{menu.icon}}</mat-icon>
+                        <mat-icon style="vertical-align: middle;margin-right: 5px;color:#20c997;">{{menu.icon}}</mat-icon>
                         {{menu.title}}</button>
                 </div>
                
