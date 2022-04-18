@@ -21,6 +21,7 @@ export class MainNavComponent {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private router:Router) {}
+    FullName="Ravi Shankar Kumar"
   showSocialForMobile=false;
   showSocialForweb=true;
   myControl = new FormControl();
@@ -55,6 +56,18 @@ export class MainNavComponent {
         icon:"flag"
       }
       ];
+      userProfileMenuList = [
+        {
+          title:"Profile",
+          routeUrl:"user-profile",
+          icon:"person_add"
+        },
+        {
+          title:"Logout",
+          routeUrl:"",
+          icon:"exit_to_app"
+        }
+        ];
   options: string[] = ['Angular', 'Angular Material', 'HTML'];
   filteredOptions: Observable<string[]> = new Observable<string[]>();
   ngOnInit() {

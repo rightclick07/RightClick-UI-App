@@ -24,6 +24,8 @@ export class HomeComponent implements OnInit {
       img:"assets/img/courses/angular-material.jpg",
       price:"RS 1000",
       description:"Step by Step Tutorial",
+      author:"Ravi Shankar Kumar",
+      rating:"",
       routePath:"angular-material"
     },
     {
@@ -40,6 +42,8 @@ export class HomeComponent implements OnInit {
       img:"assets/img/courses/angular.png",
       price:"RS 1000",
       description:"Step by Step Tutorial",
+      author:"Ravi Shankar Kumar",
+      rating:"",
       routePath:"css"
     },
     {
@@ -48,6 +52,8 @@ export class HomeComponent implements OnInit {
       img:"assets/img/courses/angular-material.jpg",
       price:"RS 1000",
       description:"Step by Step Tutorial",
+      author:"Ravi Shankar Kumar",
+      rating:"",
       routePath:"angular"
     },
     {
@@ -56,6 +62,8 @@ export class HomeComponent implements OnInit {
       img:"assets/img/courses/html.png",
       price:"RS 1000",
       description:"Step by Step Tutorial",
+      author:"Ravi Shankar Kumar",
+      rating:"",
       routePath:"angular"
     },
     {
@@ -64,6 +72,8 @@ export class HomeComponent implements OnInit {
       img:"assets/img/courses/html.png",
       price:"RS 1000",
       description:"Step by Step Tutorial",
+      author:"Ravi Shankar Kumar",
+      rating:"",
       routePath:"angular"
     },
     {
@@ -72,6 +82,8 @@ export class HomeComponent implements OnInit {
       img:"assets/img/courses/html.png",
       price:"RS 1000",
       description:"Step by Step Tutorial",
+      author:"Ravi Shankar Kumar",
+      rating:"",
       routePath:"angular"
     },
   ]

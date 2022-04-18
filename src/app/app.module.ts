@@ -18,6 +18,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatCarouselModule } from 'ng-mat-carousel';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import { AppHeaderComponent } from './core/app-header/app-header.component';
 import { AppFooterComponent } from './core/app-footer/app-footer.component';
 import { LoginComponent } from './components/login/login.component';
@@ -69,7 +70,8 @@ import { CareerComponent } from './components/career/career.component';
     FlexLayoutModule,
     FormsModule,
     LayoutModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

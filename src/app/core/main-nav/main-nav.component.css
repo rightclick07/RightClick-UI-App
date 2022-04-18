@@ -65,3 +65,11 @@
   padding-bottom: 0;
   margin: 0;
 }
+.fullname{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5px;
+  padding: 5px;
+  font-weight: bold;
+ 
+}

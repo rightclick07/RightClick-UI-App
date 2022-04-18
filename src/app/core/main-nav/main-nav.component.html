@@ -119,7 +119,7 @@
           <span class="spacer"></span>
           <button mat-button fxHide.xs="true" fxHide.sm="true" >
             <a class="about" routerLink="/blogs">
-             <mat-icon style="vertical-align: middle;"> person_pin</mat-icon>
+             <mat-icon style="vertical-align: middle;">chrome_reader_mode</mat-icon>
                 Blogs</a>
          </button>
           <button mat-button [matMenuTriggerFor]="companyMenu" fxHide.xs="true" fxHide.sm="true">
@@ -131,15 +131,25 @@
                     <button routerLink="{{menu.routeUrl}}" mat-menu-item>
                         <mat-icon style="vertical-align: middle;margin-right: 5px;color:#20c997;">{{menu.icon}}</mat-icon>
                         {{menu.title}}</button>
-                </div>
-               
-               
+                </div>  
             </mat-menu>
           <button mat-button class="login-button">
             <a  routerLink="/login" routerlink-active="active-link"  class="login-link">
             <mat-icon style="vertical-align: middle;margin-right: 5px;">input</mat-icon>Login
             </a>
           </button>
+          <button matTooltip="Profile & Logout" mat-button [matMenuTriggerFor]="userProfileMenu"><mat-icon>person_pin</mat-icon></button>
+          <mat-menu #userProfileMenu="matMenu">
+            <div style="padding: 5px;margin: 5px;">
+              <span class="fullname" >{{FullName}}</span>
+            </div>
+            <div *ngFor="let menu of userProfileMenuList">
+                <button routerLink="{{menu.routeUrl}}" mat-menu-item>
+                    <mat-icon style="vertical-align: middle;margin-right: 5px;color:#20c997;">{{menu.icon}}</mat-icon>
+                    {{menu.title}}</button>
+            </div>  
+        </mat-menu>
+          
       </mat-toolbar-row>
   </mat-toolbar>
  <router-outlet></router-outlet>
