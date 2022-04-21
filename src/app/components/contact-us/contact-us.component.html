@@ -1,1 +1,73 @@
-<p>contact-us works!</p>
+
+<div class="container">
+    <img src="assets/img/banners/contact-us-banner1.jpg" width="100%">
+    <div class="centered">
+        <mat-chip-list >
+            <mat-chip class="chip" >
+                RightClick Programming
+            </mat-chip>  
+        </mat-chip-list>
+        
+    </div>
+</div>
+
+<div class="caption">
+    <h1 style="color: #1b8465 ;margin: 10px;">Get in touch with us today</h1>
+    <p style="color: rgb(135, 133, 133);">RightClick Programming is synonymous to 24/7 assistance and much more than we can fit on an "About" page. We are in your corner, at all times for any queries.</p>    
+    <div>
+        <p style="font-family: Arial, Helvetica, sans-serif;font-size: 20px;"><mat-icon style="vertical-align: middle; margin:2px;color:#20c997">contact_mail</mat-icon>heyrightclick@gmail.com</p>
+        <p style="font-family: Arial, Helvetica, sans-serif;font-size: 20px;"><mat-icon style="vertical-align: middle; margin:2px;color:#20c997">call</mat-icon>+918620038489</p>
+        
+    </div>
+    
+</div>
+<div>
+    <mat-card class="card mat-elevation-z13">
+        <mat-card-title style="color: #1b8465 ;font-weight: bold;font-family: Arial, Helvetica, sans-serif;text-align: center;margin-top: 10px;">Contact Us Here</mat-card-title>
+        
+        <div fxLayout="column" fxLayoutAlign="center" style="margin-top:25px">
+            <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+              <div fxLayoutAlign="center">
+                <mat-form-field style="width:80%" appearance="outline">
+                  <mat-label>Enter Name</mat-label>
+                  <input formControlName="name" matInput>
+                  <mat-error *ngIf="form.controls['name'].invalid">Please enter a valid name</mat-error>
+                </mat-form-field>
+              </div>
+              <div fxLayoutAlign="center" style="margin-top:10px">
+                <mat-form-field style="width:80%" appearance="outline">
+                  <mat-label>Enter Email Address</mat-label>
+                  <input type="text" formControlName="emailId" matInput>
+                  <mat-error *ngIf="form.controls['emailId'].invalid">Please enter a valid Email</mat-error>
+                </mat-form-field>
+              </div>
+              <div fxLayoutAlign="center" style="margin-top:10px">
+                <mat-form-field style="width:80%" appearance="outline">
+                  <mat-label>Enter Phone Number</mat-label>
+                  <input matInput mask="(000) 000-0000" placeholder="Ex. (000) 000-0000" value="" formControlName="phoneNumber">
+                  <mat-error *ngIf="form.controls['phoneNumber'].invalid">Please enter a valid Phone Number</mat-error>
+                </mat-form-field>
+              </div>
+              <div fxLayoutAlign="center" style="margin-top:10px">
+                <mat-form-field style="width:80%" appearance="outline">
+                  <mat-label>Enter Course Detail</mat-label>
+                  <textarea matInput placeholder="Enter Course Details" ormControlName="courseDetail"></textarea>
+                  <mat-error *ngIf="form.controls['courseDetail'].invalid">Please enter course details</mat-error>
+                </mat-form-field>
+              </div>
+              <div fxLayoutAlign="center" style="margin-top:20px">
+                <button class="button" [disabled]="!form.valid || formSubmitted" type="submit" mat-raised-button>Submit</button>
+              </div>
+            </form>
+          </div>
+    </mat-card>
+</div>
+<div>
+    <mat-card class="card mat-elevation-z13">
+        <mat-card-title style="color: #1b8465 ;font-weight: bold;font-family: Arial, Helvetica, sans-serif;text-align: center;margin-top: 10px;">Locate Us Here</mat-card-title>
+        
+        <div class="full" id="map">
+
+        </div>
+    </mat-card>
+</div>

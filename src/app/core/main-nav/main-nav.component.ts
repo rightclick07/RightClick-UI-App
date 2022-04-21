@@ -5,13 +5,14 @@ import { map, shareReplay } from 'rxjs/operators';
 import {FormControl} from '@angular/forms';
 import {startWith} from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/Services/AuthService/authentication.service';
 @Component({
   selector: 'app-main-nav',
   templateUrl: './main-nav.component.html',
   styleUrls: ['./main-nav.component.css']
 })
 export class MainNavComponent {
-
+  FullName:any;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -20,8 +21,8 @@ export class MainNavComponent {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private router:Router) {}
-    FullName="Ravi Shankar Kumar"
+    private router:Router,
+    private authService:AuthenticationService) {}
   showSocialForMobile=false;
   showSocialForweb=true;
   myControl = new FormControl();
@@ -75,6 +76,8 @@ export class MainNavComponent {
       startWith(''),
       map(value => this._filter(value)),
     );
+    this.isLoggedIn();
+    this.getFullUserName();
   }
 
   private _filter(value: string): string[] {
@@ -90,5 +93,17 @@ export class MainNavComponent {
         }
     }
     this.router.navigateByUrl(routeString)
+  }
+  getFullUserName(){
+    this.FullName=this.authService.getUserFullName();
+  }
+  public isLoggedIn(){
+    console.log(this.authService.isUserLoggedIn());
+    return this.authService.isUserLoggedIn(); ;
+    
+  }
+  logout(){
+    this.authService.clear();
+    this.router.navigateByUrl('/login')
   }
 }

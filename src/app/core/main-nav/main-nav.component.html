@@ -133,23 +133,33 @@
                         {{menu.title}}</button>
                 </div>  
             </mat-menu>
-          <button mat-button class="login-button">
-            <a  routerLink="/login" routerlink-active="active-link"  class="login-link">
-            <mat-icon style="vertical-align: middle;margin-right: 5px;">input</mat-icon>Login
-            </a>
-          </button>
-          <button matTooltip="Profile & Logout" mat-button [matMenuTriggerFor]="userProfileMenu"><mat-icon>person_pin</mat-icon></button>
-          <mat-menu #userProfileMenu="matMenu">
-            <div style="padding: 5px;margin: 5px;">
-              <span class="fullname" >{{FullName}}</span>
+            <div *ngIf="!isLoggedIn()">
+              <button  mat-button class="login-button" >
+                <a  routerLink="/login" routerlink-active="active-link"  class="login-link">
+                <mat-icon style="vertical-align: middle;margin-right: 5px;">input</mat-icon>Login
+                </a>
+              </button>
             </div>
-            <div *ngFor="let menu of userProfileMenuList">
-                <button routerLink="{{menu.routeUrl}}" mat-menu-item>
-                    <mat-icon style="vertical-align: middle;margin-right: 5px;color:#20c997;">{{menu.icon}}</mat-icon>
-                    {{menu.title}}</button>
+          <div *ngIf="isLoggedIn()">
+            <button  matTooltip="Profile & Logout" mat-button [matMenuTriggerFor]="userProfileMenu"><mat-icon>person_pin</mat-icon></button>
+            <mat-menu #userProfileMenu="matMenu">
+              <div style="padding: 5px;margin: 5px;">
+                <span class="fullname" >{{FullName}}</span>
+              </div>
+              <div>
+                  <button routerLink="/user-profile" mat-menu-item>
+                      <mat-icon style="vertical-align: middle;margin-right: 5px;color:#20c997;">person_add</mat-icon>
+                      Profile</button>
+              </div>
+              <div>
+                <button (click)="logout()" mat-menu-item>
+                    <mat-icon style="vertical-align: middle;margin-right: 5px;color:#20c997;">exit_to_app</mat-icon>
+                    LogOut</button>
             </div>  
-        </mat-menu>
+          </mat-menu>
+          </div>
           
+        
       </mat-toolbar-row>
   </mat-toolbar>
  <router-outlet></router-outlet>

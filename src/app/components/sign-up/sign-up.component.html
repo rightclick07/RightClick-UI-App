@@ -6,7 +6,7 @@
       </mat-card-title>
     </div>
     <mat-divider></mat-divider>
-    <form [formGroup]="userForm" (ngSubmit)="checkLogin()" class="form">
+    <form [formGroup]="userForm" (ngSubmit)="OnSubmit()" class="form">
         <div>
           <mat-form-field  class="form-field">
               <mat-label>Username</mat-label>

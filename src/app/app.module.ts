@@ -19,6 +19,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { MatCarouselModule } from 'ng-mat-carousel';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatChipsModule} from '@angular/material/chips';
 import { AppHeaderComponent } from './core/app-header/app-header.component';
 import { AppFooterComponent } from './core/app-footer/app-footer.component';
 import { LoginComponent } from './components/login/login.component';
@@ -33,6 +34,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { CareerComponent } from './components/career/career.component';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +54,7 @@ import { CareerComponent } from './components/career/career.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
@@ -65,13 +69,15 @@ import { CareerComponent } from './components/career/career.component';
     MatListModule,
     MatDividerModule,
     MatGridListModule,
+    MatChipsModule,
     MatCarouselModule,
     MatAutocompleteModule,
     FlexLayoutModule,
     FormsModule,
     LayoutModule,
     MatSidenavModule,
-    MatTooltipModule
+    MatTooltipModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
