@@ -1,0 +1,74 @@
+.chip{
+    display:flex; 
+     text-align: center;
+     background-color:#20c997 ;
+     color: white;
+}
+.container {
+   position: relative;
+   text-align: center;
+   color: white;
+ }
+ .centered {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+ }
+.caption{
+    position: relative;
+    background-image: linear-gradient(rgb(178, 195, 195),white);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    top: 0;
+    margin:0px;
+    padding: 20px;
+}
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    background-image: linear-gradient(#20c997,white);
+}
+
+.flex-container > mat-card {
+    flex: 1 1 160px;
+    margin:5px;
+    background-image: linear-gradient(white,#20c997);
+    padding: 20px;
+}
+.card{
+    margin: 5px;
+    padding: 5px;
+} 
+.header-image {
+    background-image: url('/assets/img/company-person/ravi_icon.png');
+    background-size: cover;
+ }
+ .header-image1 {
+    background-image: url('/assets/img/company-person/nidhi_icon.png');
+    background-size: cover;
+ }
+ .header-image2 {
+    background-image: url('/assets/img/company-person/ravi_icon.png');
+    background-size: cover;
+ }
+ .header-image3 {
+    background-image: url('/assets/img/company-person/nidhi_icon.png');
+    background-size: cover;
+ }
+ .culture{
+     list-style: none;
+    display: block;
+   line-height: 2em;
+   font-size: larger;
+   margin-left: 5%;
+ }
+ .icon{
+     color: #20c997;
+     margin-right:10px;
+     vertical-align: middle;
+ }

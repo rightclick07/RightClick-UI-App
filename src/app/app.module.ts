@@ -35,7 +35,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { CareerComponent } from './components/career/career.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import {MatStepperModule} from '@angular/material/stepper';
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +77,7 @@ import { HttpClientModule } from '@angular/common/http';
     LayoutModule,
     MatSidenavModule,
     MatTooltipModule,
-    
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
