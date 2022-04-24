@@ -1,24 +1,18 @@
-<!-- <mat-sidenav-container>
-    <mat-sidenav mode="side" [(opened)]="opened">
-        <a routerLink="intro">intro</a>
-        <div>
-            <h3 style="font-family: Arial, Helvetica, sans-serif;font-weight: bold;color:rgb(160, 146, 17);text-align: center;" >Angular Tutorial</h3>
-        <mat-divider></mat-divider>
-        </div>
-        <mat-list *ngFor="let key of topics">
-            <mat-list-item  class="item">
-                <a  class="link" routerLink="{{key.iframeLink}}">{{key.topic}}</a>
-            </mat-list-item>
-        </mat-list>
-    </mat-sidenav>
-    <router-outlet></router-outlet>
-    <mat-sidenav-content>
-        
-        
-    </mat-sidenav-content>
-</mat-sidenav-container> -->
+
 <mat-drawer-container class="container mat-elevation-z3">
-    <mat-drawer mode="side" opened fxHide.sm="true" fxHide.xs="true">
+    <!-- <mat-toolbar-row>
+        <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()"
+            *ngIf="isHandset$ | async">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            Hello
+       </button>
+    </mat-toolbar-row> -->
+
+    <mat-drawer #drawer mode="side" opened fxHide.sm="true" fxHide.xs="true">
         <div style="text-align: center;">
             <img   width="75px" src="assets/img/course-icon/angular.png" alt="Course image">
             <h3 style="color:rgb(160, 146, 17) ; font-family: Arial, Helvetica, sans-serif;font-weight: bolder;">Angular Tutorial</h3>

@@ -6,6 +6,7 @@ import { AngularSidenavComponent } from './angular-core/angular-sidenav/angular-
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { IntroComponent } from './angular-component/intro/intro.component';
 import { EnvironmentSetupComponent } from './angular-component/environment-setup/environment-setup.component';
@@ -24,6 +25,7 @@ import { NgifDirectivesComponent } from './angular-component/ngif-directives/ngi
 import { NgswitchDirectivesComponent } from './angular-component/ngswitch-directives/ngswitch-directives.component';
 import { NgforDirectivesComponent } from './angular-component/ngfor-directives/ngfor-directives.component';
 import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 
@@ -59,7 +61,9 @@ import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
     MatListModule,
     MatButtonModule,
     FlexLayoutModule,
-    FlexModule
+    FlexModule,
+    MatIconModule,
+    MatToolbarModule
   ]
 })
 export class AngularModule { }

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import {FormControl} from '@angular/forms';
 import {startWith} from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/Services/AuthService/authentication.service';
+import { UserService } from 'src/app/Services/user/user.service';
 @Component({
   selector: 'app-main-nav',
   templateUrl: './main-nav.component.html',
@@ -13,6 +14,7 @@ import { AuthenticationService } from 'src/app/Services/AuthService/authenticati
 })
 export class MainNavComponent {
   FullName:any;
+  
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -22,7 +24,8 @@ export class MainNavComponent {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private router:Router,
-    private authService:AuthenticationService) {}
+    private authService:AuthenticationService,
+    private userService:UserService) {}
   showSocialForMobile=false;
   showSocialForweb=true;
   myControl = new FormControl();
@@ -95,7 +98,19 @@ export class MainNavComponent {
     this.router.navigateByUrl(routeString)
   }
   getFullUserName(){
-    this.FullName=this.authService.getUserFullName();
+    const username=this.authService.getUserFullName();
+    if(username){
+      this.userService.getFullUserName(username).subscribe(
+        response=>{
+            this.FullName=response;
+        },
+        error=>{
+          console.log(error);
+          
+        }
+      )
+    }
+    
   }
   public isLoggedIn(){
     console.log(this.authService.isUserLoggedIn());
