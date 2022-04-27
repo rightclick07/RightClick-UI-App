@@ -1,1 +1,86 @@
-<p>career works!</p>
+<mat-card>
+<mat-card class="card mat-elevation-z13">
+    <div class="Align-chip">
+        <mat-chip-list>
+            <mat-chip class="chip">
+                Careers
+            </mat-chip>
+        </mat-chip-list>
+    </div>
+    <h1 class="Title"> Want An opportunity to Grow? Join RightClick Programming
+    </h1>
+    <p class="Content">RightClick Programming will provide you best opportunity to grow and learn.
+        You will be able to design and develop the work which you love to do and we are here to give you this
+        opportunity.
+        We ensure you a work- friendly environment and wants you to grow with the growth of an organization.
+    </p>
+</mat-card>
+
+<mat-card class="card-slide mat-elevation-z13">
+
+
+    <div class="f-row">
+
+        <marquee behavior="scroll" direction="left" scrollamount="20">
+            <ng-container style="margin: 5px;">
+                <img src="assets/img/banners/career.jpg" width="30%">
+            </ng-container>
+            <ng-container style="margin: 5px;">
+                <img src="assets/img/banners/career2.jpg" width="30%">
+            </ng-container>
+            <ng-container style="margin: 5px;">
+                <img src="assets/img/banners/career3.jpg" width="30%">
+            </ng-container>
+            <ng-container style="margin: 5px;">
+                <img src="assets/img/banners/career4.jpg" width="30%">
+            </ng-container>
+
+            <ng-container style="margin: 5px;">
+                <img src="assets/img/banners/career5.png" width="30%">
+            </ng-container>
+            <ng-container style="margin: 5px;">
+                <img src="assets/img/banners/career6.jpg" width="30%">
+            </ng-container>
+            <ng-container style="margin: 5px;">
+                <img src="assets/img/banners/career7.jpg" width="30%">
+            </ng-container>
+            <ng-container style="margin: 5px;">
+                <img src="assets/img/banners/career8.jpg" width="30%">
+            </ng-container>
+        </marquee>
+
+    </div>
+</mat-card>
+</mat-card>
+<mat-card>
+    <mat-card-title style="text-align: center;">
+        <h2 style="color: rgb(21, 109, 80);">Job Openings</h2>
+    </mat-card-title>
+    <mat-card *ngFor="let key of job_list" class="card-job mat-elevation-z13">
+        <div style="margin:5px">
+            <ng-container mat-card-avatar class="icons">
+                <img src="{{key.jobIcon}}" width="30px" style="vertical-align:middle;margin-right:5px;">
+               
+
+            </ng-container>
+            
+           <b>{{key.jobTitle}}</b> 
+        </div>
+      
+        <div>
+            <button mat-button class="button">Apply Now</button>
+        </div>
+        <div>
+            
+            <mat-icon class="icon"> location_on</mat-icon>
+                {{key.jobLocation}}
+            <mat-icon class="icon1">work</mat-icon>
+            {{key.jobType}}
+            <mat-icon class="icon2">watch_later</mat-icon>
+            {{key.lastPosted}}
+        </div>
+
+
+
+    </mat-card>
+</mat-card>

@@ -9,16 +9,17 @@ mat-sidenav{
 
 .link{
     text-decoration: none;
-     color:rgb(160, 146, 17) ;
+     color:rgb(51, 53, 52) ;
 }
 .item:hover{
-    background-color: rgb(202, 194, 125);
+    background-color: rgb(86, 223, 193);
     color: white;
 }
 .container {
     width: auto;
     height: 1500px;
     margin: 10px;
+    padding: 10px;
     
   }
   .is-active{

@@ -8,6 +8,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import { IntroComponent } from './angular-component/intro/intro.component';
 import { EnvironmentSetupComponent } from './angular-component/environment-setup/environment-setup.component';
 import { GettingStartedComponent } from './angular-component/getting-started/getting-started.component';
@@ -63,7 +64,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     FlexLayoutModule,
     FlexModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTooltipModule
   ]
 })
 export class AngularModule { }

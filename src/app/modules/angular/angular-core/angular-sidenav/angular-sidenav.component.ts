@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, Subscription } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-angular-sidenav',
@@ -10,8 +11,8 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class AngularSidenavComponent implements OnInit {
   opened=false;
+  id:any;
 topics=[
-  
   {routeName: 'intro',topic:"Introduction"},
   {routeName: 'environment-setup',topic:"Environment Setup"},
   {routeName: 'getting-sarted',topic:"Getting Started"},
@@ -38,9 +39,11 @@ isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Ha
       map(result => result.matches),
       shareReplay()
     );
-  constructor(private breakpointObserver: BreakpointObserver,) { }
+  constructor(private breakpointObserver: BreakpointObserver,
+    private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
+    // this.id = this.activatedRoute.snapshot.paramMap.get('id');
   }
 
 }
