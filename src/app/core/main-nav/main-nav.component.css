@@ -1,7 +1,12 @@
 .sidenav-container {
   height: 100%;
 }
-
+.float_whatsapp{
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 1000;
+}
 .sidenav {
   width: 200px;
 }
