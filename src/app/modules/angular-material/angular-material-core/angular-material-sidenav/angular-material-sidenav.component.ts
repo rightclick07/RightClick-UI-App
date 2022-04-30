@@ -1,14 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, Subscription } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
+import { MatSidenav } from '@angular/material/sidenav';
 @Component({
   selector: 'app-angular-material-sidenav',
   templateUrl: './angular-material-sidenav.component.html',
   styleUrls: ['./angular-material-sidenav.component.css']
 })
 export class AngularMaterialSidenavComponent implements OnInit {
+  @ViewChild('drawer', { static: true }) drawer: MatSidenav;
+
+  ngAfterViewInit() {
+     // this.drawer is NOW valid !!
+     this.isHandset$.subscribe(isVisible => {
+       if(isVisible) {
+         this.drawer.close();
+       }
+     });
+  }
   opened=false;
   id:any;
 topics=[
