@@ -1,1 +1,42 @@
-<p>blogs works!</p>
+<mat-card>
+    <mat-card-title>
+      Trending Blogs
+    </mat-card-title>
+    <div class="flex-container">
+      <div class="mat-elevation-z5" *ngFor="let blog of trendingBlogs">
+        <div>
+          <div>
+            <h3 style="padding: 5px;text-align: center;color: #262727;font-weight: lighter;">{{blog.title}}</h3>
+          </div>
+          <img  src="{{blog.img}}" width="250px" height="120px" alt="Course image">
+          
+        </div>
+        <button (click)="OpenTrendingBlog(blog.id)" style="background-color: #20c997;color: white;width: 100%;text-align: center;padding: 5px;" mat-button>Read Blog</button>
+   
+        </div>
+    
+    </div>
+</mat-card>
+<mat-accordion>
+    <mat-expansion-panel >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            <h3>More Blogs</h3> 
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="flex-container">
+        <div class="mat-elevation-z5" *ngFor="let blog of trendingBlogs">
+          <div>
+            <div>
+              <h3 style="padding: 5px;text-align: center;color: #262727;font-weight: lighter;">{{blog.title}}</h3>
+            </div>
+            <img  src="{{blog.img}}" width="250px" height="120px" alt="Course image">
+            
+          </div>
+          <button (click)="OpenTrendingBlog(blog.id)" style="background-color: #20c997;color: white;width: 100%;text-align: center;padding: 5px;" mat-button>Take Free Course</button>
+     
+          </div>
+      
+      </div>
+    </mat-expansion-panel>
+</mat-accordion>

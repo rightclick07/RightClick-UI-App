@@ -9,10 +9,10 @@
     <h3 style="color: #20c997;;font-family: Arial, Helvetica, sans-serif;font-weight: bolder;">Latest Courses</h3>
   </div>
   <div class="flex-container">
-          <div class="mat-elevation-z5" *ngFor="let course of courses">
+          <div class="mat-elevation-z5" *ngFor="let course of latestCourses">
             <div>
               <div>
-                <h3  style="text-align: center;color: #20c997;font-weight: lighter;">{{course.title}}</h3>
+                <h3  style="text-align: center;color: #262727;font-weight: lighter;">{{course.title}}</h3>
               </div>
               <img  src="{{course.img}}" width="250px" height="120px" alt="Course image">
               
@@ -23,7 +23,7 @@
                 </p>
               </mat-card-content>
               
-                <button (click)="OpenCourse(course.id)" style="background-color: #20c997;color: white;width: 100%;text-align: center;padding: 5px;" mat-button>Take Course</button>
+                <button (click)="OpenLatestCourse(course.id)" style="background-color: #20c997;color: white;width: 100%;text-align: center;padding: 5px;" mat-button>Take Free Course</button>
             </div>
   
   </div>
@@ -34,10 +34,10 @@
   <h3 style="color:#20c997;font-family: Arial, Helvetica, sans-serif;font-weight: bolder;">Trending Technology</h3>
 </div>
 <div class="flex-container">
-  <div class="mat-elevation-z5" *ngFor="let course of courses">
+  <div class="mat-elevation-z5" *ngFor="let course of trendingCourses">
     <div >
       <div>
-        <h3 style="padding: 5px;text-align: center;color: #20c997;font-weight: lighter;">{{course.title}}</h3>
+        <h3 style="padding: 5px;text-align: center;color: #262727;font-weight: lighter;">{{course.title}}</h3>
       </div>
       <img  src="{{course.img}}" width="250px" height="120px" alt="Course image">
       
@@ -48,7 +48,7 @@
         </p>
       </mat-card-content>
       
-        <button style="background-color: #20c997;color: white;width: 100%;text-align: center;padding: 5px;" mat-button>Buy Course</button>
+        <button (click)="OpenTrendingCourse(course.id)" style="background-color: #20c997;color: white;width: 100%;text-align: center;padding: 5px;" mat-button>Take Free Course</button>
     </div>
 
 </div>
@@ -58,10 +58,10 @@
     <h3 style="color: #20c997;font-family: Arial, Helvetica, sans-serif;font-weight: bolder;">Placement Preparation</h3>
   </div>
   <div class="flex-container">
-    <div class="mat-elevation-z5" *ngFor="let course of courses">
+    <div class="mat-elevation-z5" *ngFor="let course of placementCourses">
       <div >
         <div>
-          <h3 style="padding: 5px;text-align: center;color: #20c997;font-weight: lighter;">{{course.title}}</h3>
+          <h3 style="padding: 5px;text-align: center;color: #262727;font-weight: lighter;">{{course.title}}</h3>
         </div>
         <img  src="{{course.img}}" width="250px" height="120px" alt="Course image">
         
@@ -73,7 +73,7 @@
         </mat-card-content>
         
        
-          <button (click)="OpenCourse(course.id)" style="background-color: #20c997;;color: white;width: 100%;text-align: center;padding: 5px;" mat-button>Buy Course</button>
+          <button (click)="OpenPlacementCourse(course.id)" style="background-color: #20c997;;color: white;width: 100%;text-align: center;padding: 5px;" mat-button>Take Free Course</button>
       </div>
   
   </div>
@@ -83,10 +83,10 @@
       <h3 style="color: #20c997;;font-family: Arial, Helvetica, sans-serif;font-weight: bolder;">Computer Science</h3>
     </div>
     <div class="flex-container">
-      <div class="mat-elevation-z5" *ngFor="let course of courses">
+      <div class="mat-elevation-z5" *ngFor="let course of computerScienceCourses">
         <div >
           <div>
-            <h3 style="padding: 5px;text-align: center;color: #20c997;font-weight: lighter;">{{course.title}}</h3>
+            <h3 style="padding: 5px;text-align: center;color: #262727;font-weight: lighter;">{{course.title}}</h3>
           </div>
           <img  src="{{course.img}}" width="250px" height="120px" alt="Course image">
           
@@ -96,9 +96,7 @@
              {{course.description}}
             </p>
           </mat-card-content>
-          
-         
-            <button style="background-color: #20c997;color: white;width: 100%;text-align: center;padding: 5px;" mat-button>Buy Course</button>
+            <button (click)="OpenComputerScienceCourse(course.id)" style="background-color: #20c997;color: white;width: 100%;text-align: center;padding: 5px;" mat-button>Take Free Course</button>
         </div>
     
     </div>
