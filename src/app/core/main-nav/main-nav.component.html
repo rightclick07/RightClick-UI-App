@@ -7,12 +7,22 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>
+      <div>
+        <a routerLink="/" routerlink-active="active-link" class="logo-link">
+            <img src="assets/img/rightclick-logo.png" width="30px" style="vertical-align: middle;margin-right: 5px;"   alt="logo"/>
+            <span style="color:#20c997;">RightClick</span>
+        </a>
+    </div>
+    </mat-toolbar>
+    <mat-divider></mat-divider>
     <mat-nav-list>
       <a mat-list-item routerLink="/" routerlink-active="active-link">Home</a>
       <a mat-list-item routerLink="/courses" routerlink-active="active-link">Courses</a>
       <a mat-list-item routerLink="/blogs" routerlink-active="active-link">Blogs</a>
       <a mat-list-item routerLink="/about-us" routerlink-active="active-link">About Us</a>
+      <a mat-list-item routerLink="/contact-us" routerlink-active="active-link">Contact Us</a>
+      <a mat-list-item routerLink="/career" routerlink-active="active-link">Careers</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,8 +32,8 @@
         <mat-toolbar-row style="background-color: white;">
           <div>
               <a routerLink="/" routerlink-active="active-link" class="logo-link">
-                  <img src="assets/img/red-logo.png" width="30px" style="vertical-align: middle;margin-right: 5px;"   alt="logo"/>
-                  <span style="color:red;">RightClick</span>
+                  <img src="assets/img/rightclick-logo.png" width="30px" style="vertical-align: middle;margin-right: 5px;"   alt="logo"/>
+                  <span style="color:#20c997;">RightClick</span>
               </a>
           </div>
          
