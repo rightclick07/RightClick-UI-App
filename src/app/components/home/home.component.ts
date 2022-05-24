@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
       description:"Step by Step Tutorial",
       author:"Ravi Shankar Kumar",
       rating:"",
-      routePath:"css"
+      routePath:"typescript"
     },
     {
       id:5,

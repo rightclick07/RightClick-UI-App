@@ -31,7 +31,7 @@ export class ContactUsComponent implements OnInit {
     })
 
     loader.load().then(() => {
-      console.log('loaded gmaps')
+      // console.log('loaded gmaps')
 
       const location = { lat:12.844078150896806, lng:77.65700882262094}
 
@@ -48,7 +48,7 @@ export class ContactUsComponent implements OnInit {
     })
   }
   onSubmit(element:any){
-console.log(element);
+// console.log(element);
 
   }
 

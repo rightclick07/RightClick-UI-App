@@ -26,18 +26,18 @@ export class LoginComponent implements OnInit {
       (response:any)=>{
         console.dir(response)
       const token=response.token;
-      console.log("token"+token);
+      // console.log("token"+token);
       
      },
      error=>{
-       console.log(error);
+      //  console.log(error);
        
      }
     )
   }
 
   checkLogin(){
-    console.log(this.userForm.value);
+    // console.log(this.userForm.value);
     this.loginservice.saveToken(this.userForm.value);
     const username= this.userForm.get('username');
     this.loginservice.setUserName(username?.value);

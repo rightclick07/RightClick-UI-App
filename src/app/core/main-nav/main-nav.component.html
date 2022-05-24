@@ -124,14 +124,14 @@
                         {{menu.title}}</button>
                 </div>  
             </mat-menu>
-            <div *ngIf="!isLoggedIn()">
+            <!-- <div *ngIf="!isLoggedIn()">
               <button  mat-button class="login-button" >
                 <a  routerLink="/login" routerlink-active="active-link"  class="login-link">
                 <mat-icon style="vertical-align: middle;margin-right: 5px;">input</mat-icon>Login
                 </a>
               </button>
-            </div>
-          <div *ngIf="isLoggedIn()">
+            </div> -->
+          <!-- <div *ngIf="isLoggedIn()">
             <button  matTooltip="Profile & Logout" mat-button [matMenuTriggerFor]="userProfileMenu"><mat-icon>person_pin</mat-icon></button>
             <mat-menu #userProfileMenu="matMenu">
               <div style="padding: 5px;margin: 5px;">
@@ -148,7 +148,7 @@
                     LogOut</button>
             </div>  
           </mat-menu>
-          </div>
+          </div> -->
           
         
       </mat-toolbar-row>

@@ -16,18 +16,18 @@ generateToken(credential:UserCredential){
 }
 
   saveToken(query:UserCredential) {
-    console.log(query);
+    // console.log(query);
     
     this.generateToken(query).subscribe(
       (respose:any)=>{
        this.jwtToken= respose.token
-       console.log(this.jwtToken);
+      //  console.log(this.jwtToken);
        
        if(this.jwtToken){
         sessionStorage.setItem("token",this.jwtToken)
       }
     },error=>{
-      console.log(error); 
+      // console.log(error); 
     }
     );
     

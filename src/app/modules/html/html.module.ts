@@ -28,7 +28,7 @@ import { IframesComponent } from './html-components/iframes/iframes.component';
 import { FlexModule } from '@angular/flex-layout';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
   declarations: [
     HtmlComponent,
@@ -61,7 +61,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     FlexModule,
     MatIconModule,
     MatToolbarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTabsModule
   ]
 })
 export class HtmlModule { }

@@ -105,7 +105,7 @@ export class MainNavComponent {
             this.FullName=response;
         },
         error=>{
-          console.log(error);
+          // console.log(error);
           
         }
       )
@@ -113,7 +113,7 @@ export class MainNavComponent {
     
   }
   public isLoggedIn(){
-    console.log(this.authService.isUserLoggedIn());
+    // console.log(this.authService.isUserLoggedIn());
     return this.authService.isUserLoggedIn(); ;
     
   }
