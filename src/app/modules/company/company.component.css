@@ -1,0 +1,6 @@
+.flex-container{
+    display:flex ;
+    justify-content: center;
+    background-image: linear-gradient(#20c997,#20c997);
+    height: 840px;
+}

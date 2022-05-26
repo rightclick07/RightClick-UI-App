@@ -9,6 +9,7 @@
 }
 .sidenav {
   width: 200px;
+  z-index: 1000;
 }
 
 .hidden{
