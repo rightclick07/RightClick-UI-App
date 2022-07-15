@@ -36,7 +36,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { CareerComponent } from './components/career/career.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatStepperModule} from '@angular/material/stepper';
-
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,7 +78,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     LayoutModule,
     MatSidenavModule,
     MatTooltipModule,
-    MatStepperModule
+    MatStepperModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

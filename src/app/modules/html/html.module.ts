@@ -29,6 +29,7 @@ import { FlexModule } from '@angular/flex-layout';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
+import { MatTableModule } from '@angular/material/table';
 @NgModule({
   declarations: [
     HtmlComponent,
@@ -62,7 +63,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatIconModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTabsModule
+    MatTabsModule,
+    MatTableModule
   ]
 })
 export class HtmlModule { }

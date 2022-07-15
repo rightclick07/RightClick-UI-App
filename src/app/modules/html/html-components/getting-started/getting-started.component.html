@@ -16,7 +16,164 @@
             </iframe>
         </div>
           <div>
-            <code>npm install @angular/material</code>
+            <mat-card-title style="margin: 5px;color: rgb(24, 141, 141);">
+              GETTING STARTED WITH HTML
+            </mat-card-title>
+            <div class="content-style">
+              <h3>Creating Your First HTML Webpage</h3>
+              <p>
+                First off, you need to open your HTML editor, where you will find a clean white page on which to write your code.
+                From there you need to layout your page with the following tags.
+              </p>
+              <h3>Basic Construction of an HTML Page</h3>
+              <p></p>
+              <ul class="points">
+                <li>
+                   <p><a style="color: red;font-size:larger"><code>&lt;!DOCTYPE html&gt;</code></a>
+                     - This tag <strong>specifies the language</strong>
+                      you will write on the page. In this case, the language is HTML 5.
+                    </p>
+                </li>
+                <li>
+                   <p><a style="color: red;font-size:larger"><code>&lt;html&gt;</code></a>
+                     - This tag signals that from here on we are going to write in HTML code.</p>
+                </li>
+                <li>
+                  <p><a style="color: red;font-size:larger"><code>&lt;head&gt;</code></a> — 
+                    This is where all the <strong>metadata for the page</strong> goes —
+                     stuff mostly meant for search engines and other computer programs.
+                  </p>
+                </li>
+                <li>
+                  <p><a style="color: red;font-size:larger"><code>&lt;body&gt;</code></a> - 
+                    This is where the <strong>content of the page</strong> goes.</p>
+                </li>
+              </ul>
+              <h3>Further Tags</h3>
+              <ul>
+                <li>
+                  <p>Inside the <code style="color: red;font-size:larger">&lt;head&gt;</code> tag, there is one tag that is
+                     always included: <code style="color: red;font-size:larger">&lt;title&gt;</code>, but there are others
+                      that are just as important:
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a><code style="color: red;font-size:larger">&lt;title&gt;</code></a>
+                      This is where we <strong>insert the page name</strong> as it will appear
+                      at the top of the browser window or tab.
+                  </p>    
+                </li>
+                <li>
+                  <p>
+                    <a style="color: red;font-size:larger"><code>&lt;meta&gt;</code></a>
+                    This is where information <em>about</em> the document is stored:
+                     character encoding, name (page context), description.
+                  </p>   
+                </li>
+              </ul>
+              <h3>Adding Content</h3>
+              <p>
+                Next, we will make <code style="color: red;font-size:larger">&lt;body&gt;</code> tag.
+                  The HTML <code style="color: red;font-size:larger">&lt;body&gt;</code> is where we add the content which is designed for viewing by human eyes.
+                  This includes text, images, tables, forms and everything else that we see on the internet each day.
+              </p>
+              <h3>How to Add HTML Headings To Your Web Page</h3>
+              <p>In HTML, headings are written in the following elements:</p>
+              <ul>
+                <li><strong>h1 -  </strong>
+                  <code style="color: red;font-size:larger">&lt;h1&gt;</code>Heading 1
+                  <code style="color: red;font-size:larger">&lt;/h1&gt;</code>
+                </li>
+                <li><strong>h2 -  </strong>
+                  <code style="color: red;font-size:larger">&lt;h2&gt;</code>Heading 2
+                  <code style="color: red;font-size:larger">&lt;/h2&gt;</code>
+                </li>
+                <li><strong>h3 -  </strong>
+                  <code style="color: red;font-size:larger">&lt;h3&gt;</code>Heading 3
+                  <code style="color: red;font-size:larger">&lt;/h3&gt;</code>
+                </li>
+                <li><strong>h4 -  </strong>
+                  <code style="color: red;font-size:larger">&lt;h4&gt;</code>Heading 4
+                  <code style="color: red;font-size:larger">&lt;/h4&gt;</code>
+                </li>
+                <li><strong>h5 -  </strong>
+                  <code style="color: red;font-size:larger">&lt;h5&gt;</code>Heading 5
+                  <code style="color: red;font-size:larger">&lt;/h5&gt;</code>
+                </li>
+                <li><strong>h6 -  </strong>
+                  <code style="color: red;font-size:larger">&lt;h6&gt;</code>Heading 6
+                  <code style="color: red;font-size:larger">&lt;/h6&gt;</code>
+                </li>
+              </ul>
+              <h3>How To Add Text In HTML</h3>
+              <p>
+                  Adding text to our HTML page is simple using an element opened with the tag
+                  <code style="color: red;font-size:larger">&lt;p&gt;</code> which creates a new paragraph. We place all of our regular text inside
+                   the element <code style="color: red;font-size:larger">&lt;p&gt;</code>.When we write text in HTML, we also have a number
+                    of other elements we can use to control the text or make it appear in a certain way.
+              </p>
+              <h3>Other Key Elements</h3>
+              <p>They are as follows:</p>     
+              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Element </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+              
+                <!-- Meaning Column -->
+                <ng-container matColumnDef="meaning">
+                  <th mat-header-cell *matHeaderCellDef> Meaning </th>
+                  <td mat-cell *matCellDef="let element"> {{element.meaning}} </td>
+                </ng-container>
+              
+                <!-- Purpose Column -->
+                <ng-container matColumnDef="purpose">
+                  <th mat-header-cell *matHeaderCellDef> Purpose </th>
+                  <td mat-cell *matCellDef="let element"> {{element.purpose}} </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              <mat-card-title style="margin: 5px;color: rgb(24, 141, 141);">
+                HTML File  Example 
+              </mat-card-title>
+                            
+              <mat-tab-group>
+                <mat-tab label="HTML">
+                  <code>&lt;!DOCTYPE&gt;</code>
+                  <br>
+                  <code>&lt;html&gt;</code>
+                  <br>
+                  <code>&lt;head&gt;</code>
+                  <br>
+                  <code>&lt;title&gt;Web page title&lt;/title&gt;</code>
+                  <br>
+                  <code>&lt;/head&gt;</code>
+                  <br>
+                  <code>&lt;body&gt;</code>
+                  <br>
+                  <code>&lt;h1&gt;Write Your First Heading&lt;/h1&gt;</code>
+                  <br>
+                  <code>&lt;p&gt;Write Your First Paragraph.&lt;/p&gt;</code>
+                  <br>
+                  <code>&lt;/body&gt;</code>
+                  <br>
+                  <code>&lt;/html&gt;</code>
+                   </mat-tab>
+                <mat-tab label="CSS">
+                   <code>//no code</code>
+                </mat-tab>
+                
+              </mat-tab-group>
+            </div>
+
           </div>
       </mat-card>
       <mat-card style="flex-basis: 25%;margin: 5px;" fxHide.xs="true" fxHide.sm="true">
@@ -24,9 +181,7 @@
              marginwidth="0" marginheight="0" scrolling="no" frameborder="0"
              src="//ws-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=IN&source=ac&ref=tf_til&ad_type=product_link&tracking_id=ravi05e0-21&marketplace=amazon&amp;region=IN&placement=B07XCM6T4N&asins=B07XCM6T4N&linkId=6680ffddc271cc6e00df20297f2437ac&show_border=false&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
           </iframe>
-        </mat-card>
-       
-  
+      </mat-card>
   </div>
   
   
