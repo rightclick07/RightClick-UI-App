@@ -16,3 +16,9 @@
     color: rgb(48, 45, 45);
     margin-left: 2px;
 }
+.content-style{
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}

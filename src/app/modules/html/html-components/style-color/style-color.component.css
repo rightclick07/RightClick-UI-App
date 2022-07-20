@@ -16,3 +16,34 @@
     color: rgb(48, 45, 45);
     margin-left: 2px;
 }
+.content-style{
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+}
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    color: #383a42;
+    background: #6cd3c2bb;
+}
+code, kbd, pre, samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+.hljs-name{
+    color: red;
+}
+.hljs-attr{
+    color: #986801;
+}
+.hljs-string{
+color: green;
+
+}
+.hljs-tag{
+color: green;
+}

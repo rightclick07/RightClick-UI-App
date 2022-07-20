@@ -23,3 +23,9 @@
     word-spacing: 2px;
     letter-spacing: 1px;
   }
+  .content-style{
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
