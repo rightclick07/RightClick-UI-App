@@ -10,6 +10,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
@@ -75,6 +76,7 @@ import {MatTableModule} from '@angular/material/table';
     MatAutocompleteModule,
     FlexLayoutModule,
     FormsModule,
+    MatCheckboxModule,
     LayoutModule,
     MatSidenavModule,
     MatTooltipModule,
